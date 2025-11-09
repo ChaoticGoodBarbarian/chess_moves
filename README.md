@@ -1,48 +1,70 @@
-Ход ферзя
-Ограничение времени
-1 с
-Ограничение памяти
-64.0 Мб
-Ввод
-стандартный ввод или input.txt
-Вывод
-стандартный вывод или output.txt
-Шахматный ферзь ходит на любое количество клеток по диагонали, горизонтали или вертикали. Даны две различные клетки на шахматной доске без фигур. Определите, может ли ферзь попасть с первой клетки на вторую одним ходом.
+Queen Move
 
-Формат ввода
-Программа получает на вход четыре целых числа от 1 до 8. Первая пара чисел задаёт номер столбца и номер строки для первой клетки. Вторая пара чисел аналогично задаёт вторую клетку.
+Time limit: 1 second
+Memory limit: 64 MB
 
-Формат вывода
-Программа должна вывести YES, если из первой клетки ходом ферзя можно попасть во вторую, или NO в противном случае.
+Problem Description
 
-Пример 1
-Ввод
+A chess queen can move any number of squares along a rank, file, or diagonal.
+You are given two different squares on an empty 8×8 chessboard.
+Determine whether the queen can move from the first square to the second in one move.
 
-1
-1
-2
-2
+Input Format
 
-Вывод
+Four integers from 1 to 8:
+x1 y1 x2 y2
+
+The first pair defines the column and row of the first square.
+
+The second pair defines the column and row of the second square.
+
+Output Format
+
+Print YES if the queen can move from the first square to the second in one move,
+otherwise print NO.
+
+Examples
+
+Example 1
+Input:
+
+1 1 2 2
+
+
+Output:
 
 YES
-Пример 2
-Ввод
 
-1
-1
-2
-3
-Вывод
 
-NO
-Пример 3
-Ввод
+Example 2
+Input:
 
-5
-6
-3
-3
-Вывод
+1 1 2 3
+
+
+Output:
 
 NO
+
+
+Example 3
+Input:
+
+5 6 3 3
+
+
+Output:
+
+NO
+
+Explanation
+
+The queen moves:
+
+Vertically if x1 == x2
+
+Horizontally if y1 == y2
+
+Diagonally if abs(x1 - x2) == abs(y1 - y2)
+
+If any of these conditions is true, print YES; otherwise print NO.
